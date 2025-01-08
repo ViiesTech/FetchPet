@@ -7,7 +7,7 @@ import SVGIcons from './SVGIcons';
 import icons from '../assets/icons';
 import CustomButton from './CustomButton';
 
-const TopRatedProfiles = ({ profilePress, image, name, designation, rating, onAccept, request, containerStyle, onFullCardPress }) => {
+const TopRatedProfiles = ({ favourite, profilePress, image, name, designation, rating, onAccept, request, containerStyle, onFullCardPress }) => {
     const navigation = useNavigation()
     return (
         <TouchableOpacity
@@ -45,22 +45,25 @@ const TopRatedProfiles = ({ profilePress, image, name, designation, rating, onAc
                     style={{
                         position: 'absolute',
                         right: 0,
-                        borderRadius: 60,
+                        borderRadius: 100,
                         justifyContent: 'center',
                         alignItems: 'center',
-                        padding: 10,
-                        backgroundColor: colors.primary,
-                        shadowColor: '#000',
-                        shadowOffset: {
-                            width: 0,
-                            height: 1,
-                        },
-                        shadowOpacity: 0.22,
-                        shadowRadius: 2.22,
+                        height: responsiveHeight(5.8),
+                        width: responsiveHeight(5.8),
+                        backgroundColor: !favourite && colors.primary,
+                        borderWidth: 3,
+                        borderColor: colors.primary
+                        // shadowColor: '#000',
+                        // shadowOffset: {
+                        //     width: 0,
+                        //     height: 1,
+                        // },
+                        // shadowOpacity: 0.22,
+                        // shadowRadius: 2.22,
 
-                        elevation: 3,
+                        // elevation: 3,
                     }}>
-                    <SVGIcons image={icons.heart2} />
+                    <SVGIcons image={favourite ? icons.heart_fill : icons.heart2} />
                 </TouchableOpacity>
             </View>
             <View style={request && { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }}>
@@ -95,7 +98,7 @@ const TopRatedProfiles = ({ profilePress, image, name, designation, rating, onAc
                         </Text>
                     </TouchableOpacity>
                 </View>
-                :
+                : !favourite &&
                 <View style={{
                     flexDirection: 'row',
                     justifyContent: 'space-between'
@@ -103,6 +106,7 @@ const TopRatedProfiles = ({ profilePress, image, name, designation, rating, onAc
                     <CustomButton btnText={'Accept'} style={styles.buttonStyle} onPress={onAccept} />
                     <CustomButton btnText={'Decline'} onPress={() => navigation.goBack()} style={[styles.buttonStyle, { backgroundColor: colors.red }]} />
                 </View>
+            
             }
         </TouchableOpacity>
     );

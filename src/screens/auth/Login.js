@@ -78,7 +78,7 @@ const Login = () => {
         <AuthenticationText
           container={{ paddingTop: responsiveHeight(1.7), alignSelf: 'center' }}
           text={`Don't have an account ? Sign Up`}
-        // onPress={() => navigation.navigate(ROUTES.SIGNUP)}
+        onPress={() => navigation.navigate('Signup')}
         />
       </View>
     </Container>

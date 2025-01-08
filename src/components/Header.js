@@ -6,7 +6,7 @@ import SVGIcons from './SVGIcons';
 import icons from '../assets/icons';
 import { useNavigation } from '@react-navigation/native';
 
-const Header = ({ headerText, arrow, heart, edit, type }) => {
+const Header = ({ headerText, arrow, edit, type,add,hideUser }) => {
 
     const navigation = useNavigation()
 
@@ -31,17 +31,18 @@ const Header = ({ headerText, arrow, heart, edit, type }) => {
                     <Text style={{ color: colors.primary, fontSize: responsiveFontSize(3), fontWeight: 'bold' }}>{headerText}</Text>
                 </View>
                 <View style={{ flexDirection: 'row', alignItems: 'center', width: '30%', justifyContent: 'flex-end', alignItems: 'center' }}>
-                    {heart &&
-                        <TouchableOpacity style={{ borderWidth: 1, borderRadius: 50, borderColor: colors.primary, width: 35, height: 35, justifyContent: 'center', alignItems: 'center' }}>
+                    {add &&
+                        <TouchableOpacity onPress={() => navigation.navigate('AddPet')} style={{ borderWidth: 1, borderRadius: 50, borderColor: colors.primary, width: 35, height: 35, justifyContent: 'center', alignItems: 'center' }}>
                             <SVGIcons image={icons.heart} />
                         </TouchableOpacity>
                     }
-                    {!edit ?
+                    {!hideUser &&
                         <TouchableOpacity onPress={() => navigation.navigate('Profile', { userType: type })} style={{ borderWidth: 1, borderRadius: 50, borderColor: colors.primary, marginLeft: 15, width: 35, height: 35, justifyContent: 'center', alignItems: 'center' }}>
                             <SVGIcons image={icons.user} />
                         </TouchableOpacity>
-                        :
-                        <TouchableOpacity>
+                    }
+                         {edit &&   
+                        <TouchableOpacity onPress={() => navigation.navigate('EditProfile')}>
                             <SVGIcons image={icons.edit} />
                         </TouchableOpacity>
                     }

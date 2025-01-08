@@ -2,9 +2,7 @@ import { StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import React, { useState } from 'react'
 import DateTimePickerModal from "react-native-modal-datetime-picker";
 import { responsiveFontSize, responsiveHeight, responsiveWidth } from '../utils';
-import SVGIcons from './SVGIcons';
 import colors from '../assets/colors';
-import icons from '../assets/icons';
 
 const DatePicker = ({ heading, containerStyle,value }) => {
     const [isDatePickerVisible, setIsDatePickerVisible] = useState(false)
@@ -43,6 +41,7 @@ const styles = StyleSheet.create({
     headingStyle: {
         marginBottom: responsiveHeight(1),
         color: colors.primary,
+        fontWeight: 'bold',
         fontSize: responsiveFontSize(1.8),
     },
     dateView: {

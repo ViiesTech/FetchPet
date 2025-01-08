@@ -16,7 +16,7 @@ const Profile = ({ route }) => {
 
   return (
     <MainContainer>
-      <Header edit={true} arrow={true} headerText={'Profile'} />
+      <Header hideUser={true} edit={true} arrow={true} headerText={'Profile'} />
       <View style={styles.subContainer}>
         <View style={styles.profileWrapper}>
           <Image style={styles.imageStyle} source={images.profile12} />
@@ -51,7 +51,10 @@ const Profile = ({ route }) => {
             return (
               <React.Fragment key={index}>
                 <TouchableOpacity onPress={() => {
-                  if (item.navTo) { navigation.navigate(item.navTo) } else {
+                  if (item.navTo) {
+                    navigation.navigate(item.navTo)
+                  }
+                  else {
                     alert('working in progress')
                   }
                 }}

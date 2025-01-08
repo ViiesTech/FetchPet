@@ -16,6 +16,8 @@ const CustomInput = ({
     inputContainer,
     icon,
     textStyle,
+    alignVertical,
+    multiline
 }) => {
     return (
         <>
@@ -30,6 +32,8 @@ const CustomInput = ({
                     secureTextEntry={secureTextEntry}
                     keyboardType={keyboardType}
                     value={value}
+                    textAlignVertical={alignVertical}
+                    multiline={multiline}
                     placeholder={placeholder}
                     placeholderTextColor={colors.black}
                     onChangeText={onChange}

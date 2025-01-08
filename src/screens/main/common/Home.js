@@ -1,4 +1,4 @@
-import { ActivityIndicator, Animated, FlatList, Image, ImageBackground, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
+import { ActivityIndicator, Animated, FlatList, StyleSheet, Text, View } from 'react-native'
 import React, { useEffect, useRef, useState } from 'react'
 import Header from '../../../components/Header'
 import MainContainer from '../../../components/MainContainer'
@@ -16,12 +16,12 @@ import Banner from '../../../components/Banner'
 
 const Home = () => {
   const [type, setType] = useState('')
-
-  const navigation = useNavigation()
-  const fadeAnimService = useRef(new Animated.Value(0)).current // Fade effect for services
-  const fadeAnimProfile = useRef(new Animated.Value(0)).current // Fade effect for top-rated profiles
+  const fadeAnimService = useRef(new Animated.Value(0)).current 
+  const fadeAnimProfile = useRef(new Animated.Value(0)).current 
   const fadeAnimRides = useRef(new Animated.Value(0)).current
   const slideInAnim = useRef(new Animated.Value(-responsiveWidth(89))).current
+
+  const navigation = useNavigation()
 
   useEffect(() => {
 
@@ -150,7 +150,7 @@ const Home = () => {
         </View>
         :
         <>
-          <Header type={type} heart={true} headerText={type === 'Driver' ? 'Hey John,' : 'Hey Alicia,'} />
+          <Header type={type} add={true} headerText={type === 'Driver' ? 'Hey John,' : 'Hey Alicia,'} />
           <View style={styles.subContainer}>
             <Banner type={type} onPress={() => rideButtonPress()}/>
             {type === 'Driver' ?
@@ -161,7 +161,7 @@ const Home = () => {
               <>
                 {renderServices()}
                 {renderTopProfiles()}
-                <CustomButton style={{ marginTop: responsiveHeight(2), width: responsiveWidth(89) }} icon={icons.buttonHeart} btnText={'Become A Pet Professional'} />
+                <CustomButton onPress={() => navigation.navigate('BecomeDriver')} style={{ marginTop: responsiveHeight(2), width: responsiveWidth(89) }} icon={icons.buttonHeart} btnText={'Become A Driver'} />
               </>
             }
           </View>

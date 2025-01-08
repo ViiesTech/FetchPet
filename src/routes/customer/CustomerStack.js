@@ -6,6 +6,7 @@ import BookingConfirmed from '../../screens/main/customer/BookingConfirmed';
 import Information from '../../screens/main/customer/Information';
 import Home from '../../screens/main/common/Home';
 import DriverProfile from '../../screens/main/customer/DriverProfile';
+import BecomeDriver from '../../screens/main/customer/BecomeDriver';
 
 const Stack = createNativeStackNavigator();  
 const CustomerStack = () => {
@@ -17,6 +18,7 @@ const CustomerStack = () => {
             <Stack.Screen name='Information' component={Information} />
             <Stack.Screen name='BookingConfirmed' component={BookingConfirmed} />
             <Stack.Screen name='DriverProfile' component={DriverProfile} />
+            <Stack.Screen name='BecomeDriver' component={BecomeDriver} />
         </Stack.Navigator>
     );
 };

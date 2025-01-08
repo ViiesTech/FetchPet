@@ -380,7 +380,7 @@ export const profileSettings = [
         id: 2,
         icon: icons.favourite,
         text: 'Your Favourites',
-        navTo: '',
+        navTo: 'FavouritesDriver',
     },
     {
         id: 3,

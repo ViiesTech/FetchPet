@@ -42,6 +42,7 @@ export default Picker;
 const styles = StyleSheet.create({
   heading: {
     color: colors.primary,
+    fontWeight: 'bold',
     fontSize: responsiveFontSize(2),
     marginBottom: responsiveHeight(1),
   },
