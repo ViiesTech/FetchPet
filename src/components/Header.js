@@ -33,7 +33,7 @@ const Header = ({ headerText, arrow, edit, type,add,hideUser }) => {
                 <View style={{ flexDirection: 'row', alignItems: 'center', width: '30%', justifyContent: 'flex-end', alignItems: 'center' }}>
                     {add &&
                         <TouchableOpacity onPress={() => navigation.navigate('AddPet')} style={{ borderWidth: 1, borderRadius: 50, borderColor: colors.primary, width: 35, height: 35, justifyContent: 'center', alignItems: 'center' }}>
-                            <SVGIcons image={icons.heart} />
+                            <SVGIcons image={type === 'Customer' ? icons.password : icons.heart} width={responsiveWidth(4)} />
                         </TouchableOpacity>
                     }
                     {!hideUser &&

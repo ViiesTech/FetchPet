@@ -65,7 +65,7 @@ const Profile = ({ route }) => {
                     }
                   ]}
                 >
-                  <SVGIcons image={item.icon} />
+                  <SVGIcons width={item.id == 4 && responsiveWidth(4)} image={item.icon} />
                   <Text
                     style={[
                       styles.settingsTitle,

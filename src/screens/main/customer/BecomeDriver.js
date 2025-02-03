@@ -7,11 +7,15 @@ import { agePicker, responsiveHeight, responsiveWidth, sizePicker, timings } fro
 import Picker from '../../../components/Picker'
 import DatePicker from '../../../components/DatePicker'
 import CustomButton from '../../../components/CustomButton'
+import { useNavigation } from '@react-navigation/native'
+import AsyncStorage from '@react-native-async-storage/async-storage'
 
 const BecomeDriver = () => {
+    const navigation = useNavigation()
 
-    const onSubmitPress = () => {
-
+    const onSubmitPress = async () => {
+       await AsyncStorage.setItem('userType','Driver') 
+            navigation.navigate('DriverStack')
     }
 
     return (

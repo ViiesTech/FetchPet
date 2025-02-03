@@ -17,6 +17,7 @@ const CustomInput = ({
     icon,
     textStyle,
     alignVertical,
+    editable,
     multiline
 }) => {
     return (
@@ -32,6 +33,7 @@ const CustomInput = ({
                     secureTextEntry={secureTextEntry}
                     keyboardType={keyboardType}
                     value={value}
+                    editable={editable}
                     textAlignVertical={alignVertical}
                     multiline={multiline}
                     placeholder={placeholder}

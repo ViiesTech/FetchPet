@@ -29,7 +29,8 @@ const Signup = () => {
         if (role === 'Customer') {
             navigation.navigate('CustomerStack')
         } else {
-            navigation.navigate('DriverStack')
+            navigation.navigate('DriverDetails')
+            // navigation.navigate('DriverStack')
         }
     }
 

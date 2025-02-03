@@ -390,8 +390,8 @@ export const profileSettings = [
     },
     {
         id: 4,
-        icon: icons.settings,
-        text: 'Settings',
+        icon: icons.add_header,
+        text: 'Change Password',
         navTo: '',
     },
     {
@@ -399,5 +399,41 @@ export const profileSettings = [
         icon: icons.logout,
         text: 'Log out',
         navTo: 'AuthStack',
+    }
+]
+
+export const petExp = [
+    {
+        id: 1,
+        label: '1-2 years',
+        value: '1-2 years'
+    },
+    {
+        id: 2,
+        label: '2-3 years',
+        value: '2-3 years'
+    },
+    {
+        id: 3,
+        label: '4-5 years',
+        value: '4-5 years'
+    }
+]
+
+export const prices = [
+    {
+        id: 1,
+        label: '$ 100 per 15 KM',
+        value: '$ 100 per 15 KM'
+    },
+    {
+        id: 2,
+        label: '$ 150 per 20 KM',
+        value: '$ 150 per 20 KM'
+    },
+    {
+        id: 3,
+        label: '$ 200 per 25 KM',
+        value: '$ 200 per 25 KM'
     }
 ]
