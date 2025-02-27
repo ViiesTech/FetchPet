@@ -24,7 +24,7 @@ const AddPetInfo = ({ route }) => {
 
     return (
         <MainContainer style={styles.container}>
-            <Header hideUser={true} arrow={true} headerText={screenType === 'edit' ? 'Edit Pet' : 'Add Pet'} />
+            <Header hideUser={true} arrow={true} headerText={screenType === 'edit' ? 'Edit Pet Info' : 'Add Pet Info'} />
             <View style={styles.subContainer}>
                 <TouchableOpacity
                     style={styles.addImageView}
@@ -35,7 +35,7 @@ const AddPetInfo = ({ route }) => {
                         (345x255 or larger recommended, up to 1 MB each)
                     </Text>
                 </TouchableOpacity>
-                <View style={styles.toggleView}>
+                {/* <View style={styles.toggleView}>
                     <Text style={styles.heading}>Your Pet</Text>
                     <View style={styles.petCategoryView}>
                         {categories.map((item, index) => (
@@ -56,26 +56,303 @@ const AddPetInfo = ({ route }) => {
                             />
                         ))}
                     </View>
-                </View>
-                <View style={{ paddingTop: responsiveHeight(3) }}>
-                    <CustomInput
-                        heading={'Your Pet Nickname'}
-                        placeholder={'Tommy'}
-                        value={nickname}
-                        onChange={text => setNickname(text)}
-                    />
-                </View>
+                </View> */}
+                
                 <View style={styles.pickerView}>
                     <Picker
                         items={sizePicker}
-                        placeholder={'Medium 21 - 50 lbs'}
-                        heading={'How big is your pet?'}
+                        placeholder={'Fluffy'}
+                        heading={'Pet Name'}
                     />
                     <Picker
                         items={agePicker}
-                        placeholder={'Puppy 0 - 1 years'}
-                        heading={'How old is your pet?'}
+                        placeholder={'Dog'}
+                        heading={'Select Your Pet'}
                     />
+
+                    <Picker
+                        items={agePicker}
+                        placeholder={'Medium 21 - 50 lbs'}
+                        heading={'Pet Weight'}
+                    />
+
+                    <Picker
+                        items={agePicker}
+                        placeholder={'White'}
+                        heading={'Pet Color'}
+                    />
+
+                    <CustomInput
+                    placeholder={'Type text'}
+                    keyboardType={'text'}
+                    inputContainer={{ marginBottom: responsiveHeight(3.5), width: '100%', height: responsiveHeight(6.5) }}
+                    heading={'Distinctive Markings'}
+                    value='Lorem ipsum...'
+                    //   onChange={text => onChangeText('email', text)}
+                    textStyle={{color: colors.primary, fontWeight: 'bold'}}
+                    />
+
+                <CustomInput
+                    placeholder={'Type text'}
+                    inputContainer={{ marginBottom: responsiveHeight(3.5), width: '100%', height: responsiveHeight(6.5) }}
+                    heading={'Birth Date'}
+                    editable={true}
+                    value='01/01/2019'
+                    //   onChange={text => onChangeText('email', text)}
+                    textStyle={{color: colors.primary, fontWeight: 'bold'}}
+                    />
+
+                <CustomInput
+                    placeholder={'Type text'}
+                    inputContainer={{ marginBottom: responsiveHeight(3.5), width: '100%', height: responsiveHeight(6.5) }}
+                    heading={'Adoption Date'}
+                    editable={true}
+                    value='01/01/2019'
+                    //   onChange={text => onChangeText('email', text)}
+                    textStyle={{color: colors.primary, fontWeight: 'bold'}}
+                    />
+
+                <Picker
+                        items={agePicker}
+                        placeholder={'Enjoy shorts car rides'}
+                        heading={'Traveling'}
+                    />
+
+                    <Picker
+                        items={agePicker}
+                        placeholder={'Poodle'}
+                        heading={'breed'}
+                    />
+
+                    <Picker
+                        items={agePicker}
+                        placeholder={'Puppy 0 - 1 years'}
+                        heading={'age'}
+                    />
+
+                    <Picker
+                        items={agePicker}
+                        placeholder={'Male'}
+                        heading={'Sex'}
+                    />
+
+                <CustomInput
+                    placeholder={'Type text'}
+                    keyboardType={'text'}
+                    inputContainer={{ marginBottom: responsiveHeight(3.5), width: '100%', height: responsiveHeight(6.5) }}
+                    heading={'alteration status'}
+                    value='Lorem ipsum...'
+                    //   onChange={text => onChangeText('email', text)}
+                    textStyle={{color: colors.primary, fontWeight: 'bold'}}
+                    />
+
+                <CustomInput
+                    placeholder={'Type text'}
+                    keyboardType={'text'}
+                    inputContainer={{ marginBottom: responsiveHeight(3.5), width: '100%', height: responsiveHeight(6.5) }}
+                    heading={'groomer'}
+                    value='Lorem ipsum...'
+                    //   onChange={text => onChangeText('email', text)}
+                    textStyle={{color: colors.primary, fontWeight: 'bold'}}
+                    />
+
+                <CustomInput
+                    placeholder={'Type text'}
+                    keyboardType={'text'}
+                    inputContainer={{ marginBottom: responsiveHeight(3.5), width: '100%', height: responsiveHeight(6.5) }}
+                    heading={'Vaccination Status'}
+                    value='Lorem ipsum...'
+                    //   onChange={text => onChangeText('email', text)}
+                    textStyle={{color: colors.primary, fontWeight: 'bold'}}
+                    />
+
+                <CustomInput
+                    placeholder={'Type text'}
+                    keyboardType={'text'}
+                    inputContainer={{ marginBottom: responsiveHeight(3.5), width: '100%', height: responsiveHeight(6.5) }}
+                    heading={'Pet Insurance Name'}
+                    value='Lorem ipsum...'
+                    //   onChange={text => onChangeText('email', text)}
+                    textStyle={{color: colors.primary, fontWeight: 'bold'}}
+                    />
+
+                    <CustomInput
+                    placeholder={'Type text'}
+                    keyboardType={'numeric'}
+                    inputContainer={{ marginBottom: responsiveHeight(3.5), width: '100%', height: responsiveHeight(6.5) }}
+                    heading={'Pet Insurance Policy Number'}
+                    value='123-456-7890'
+                    //   onChange={text => onChangeText('email', text)}
+                    textStyle={{color: colors.primary, fontWeight: 'bold'}}
+                    />
+
+                    <Picker
+                        items={agePicker}
+                        placeholder={'No'}
+                        heading={'Microchipped'}
+                    />
+
+                <CustomInput
+                    placeholder={'Type text'}
+                    keyboardType={'text'}
+                    inputContainer={{ marginBottom: responsiveHeight(3.5), width: '100%', height: responsiveHeight(6.5) }}
+                    heading={'Vet Info'}
+                    value='Lorem ipsum'
+                    //   onChange={text => onChangeText('email', text)}
+                    textStyle={{color: colors.primary, fontWeight: 'bold'}}
+                    />
+
+                <CustomInput
+                    placeholder={'Type text'}
+                    keyboardType={'numeric'}
+                    inputContainer={{ marginBottom: responsiveHeight(3.5), width: '100%', height: responsiveHeight(6.5) }}
+                    heading={'Vet Contact'}
+                    value='123-456-7890'
+                    //   onChange={text => onChangeText('email', text)}
+                    textStyle={{color: colors.primary, fontWeight: 'bold'}}
+                    />
+
+                <Picker
+                        items={agePicker}
+                        placeholder={'Breeder'}
+                        heading={'Pet Obtained From'}
+                    />
+
+                <CustomInput
+                    placeholder={'Type text'}
+                    keyboardType={'text'}
+                    inputContainer={{ marginBottom: responsiveHeight(3.5), width: '100%', height: responsiveHeight(6.5) }}
+                    heading={'Optimal Temp Setting'}
+                    value='Lorem Ipsum...'
+                    //   onChange={text => onChangeText('email', text)}
+                    textStyle={{color: colors.primary, fontWeight: 'bold'}}
+                    />
+
+                <Picker
+                        items={agePicker}
+                        placeholder={'Yes'}
+                        heading={'bite history'}
+                    />
+
+                <CustomInput
+                    placeholder={'Type text'}
+                    keyboardType={'text'}
+                    inputContainer={{ marginBottom: responsiveHeight(3.5), width: '100%', height: responsiveHeight(6.5) }}
+                    heading={'medical health history'}
+                    value='Lorem Ipsum...'
+                    //   onChange={text => onChangeText('email', text)}
+                    textStyle={{color: colors.primary, fontWeight: 'bold'}}
+                    />
+
+                <CustomInput
+                    placeholder={'Type text'}
+                    keyboardType={'text'}
+                    inputContainer={{ marginBottom: responsiveHeight(3.5), width: '100%', height: responsiveHeight(6.5) }}
+                    heading={'vaccination records'}
+                    value='Puppy 0 - 1 years'
+                    //   onChange={text => onChangeText('email', text)}
+                    textStyle={{color: colors.primary, fontWeight: 'bold'}}
+                    />
+
+                <Picker
+                        items={agePicker}
+                        placeholder={'Lorem Ipsum...'}
+                        heading={'dietary restrictions'}
+                    />
+
+                <CustomInput
+                    placeholder={'Type text'}
+                    keyboardType={'text'}
+                    inputContainer={{ marginBottom: responsiveHeight(3.5), width: '100%', height: responsiveHeight(6.5) }}
+                    heading={'Add known allergies'}
+                    value='Lorem Ipsum...'
+                    //   onChange={text => onChangeText('email', text)}
+                    textStyle={{color: colors.primary, fontWeight: 'bold'}}
+                    />
+
+                <CustomInput
+                    placeholder={'Type text'}
+                    keyboardType={'text'}
+                    inputContainer={{ marginBottom: responsiveHeight(3.5), width: '100%', height: responsiveHeight(6.5) }}
+                    heading={'Favorite Treat'}
+                    value='Lorem Ipsum...'
+                    //   onChange={text => onChangeText('email', text)}
+                    textStyle={{color: colors.primary, fontWeight: 'bold'}}
+                    />
+
+                <CustomInput
+                    placeholder={'Type text'}
+                    keyboardType={'text'}
+                    inputContainer={{ marginBottom: responsiveHeight(3.5), width: '100%', height: responsiveHeight(6.5) }}
+                    heading={'Preferred food brand'}
+                    value='Lorem Ipsum...'
+                    //   onChange={text => onChangeText('email', text)}
+                    textStyle={{color: colors.primary, fontWeight: 'bold'}}
+                    />
+
+                <CustomInput
+                    placeholder={'Type text'}
+                    keyboardType={'text'}
+                    inputContainer={{ marginBottom: responsiveHeight(3.5), width: '100%', height: responsiveHeight(6.5) }}
+                    heading={'medication times'}
+                    value='Lorem Ipsum...'
+                    //   onChange={text => onChangeText('email', text)}
+                    textStyle={{color: colors.primary, fontWeight: 'bold'}}
+                    />
+
+                <Picker
+                        items={agePicker}
+                        placeholder={'Yes'}
+                        heading={'Crate trained'}
+                    />
+
+                <CustomInput
+                    placeholder={'Type text'}
+                    keyboardType={'text'}
+                    inputContainer={{ marginBottom: responsiveHeight(3.5), width: '100%', height: responsiveHeight(6.5) }}
+                    heading={'Food Serving Amount'}
+                    value='Lorem Ipsum...'
+                    //   onChange={text => onChangeText('email', text)}
+                    textStyle={{color: colors.primary, fontWeight: 'bold'}}
+                    />
+
+                <CustomInput
+                    placeholder={'Type text'}
+                    keyboardType={'text'}
+                    inputContainer={{ marginBottom: responsiveHeight(3.5), width: '100%', height: responsiveHeight(6.5) }}
+                    heading={'Feeding times'}
+                    value='3 times a day'
+                    //   onChange={text => onChangeText('email', text)}
+                    textStyle={{color: colors.primary, fontWeight: 'bold'}}
+                    />
+
+                    <Picker
+                        items={agePicker}
+                        placeholder={'Yes'}
+                        heading={'Potty trained'}
+                    />
+
+                <CustomInput
+                    placeholder={'Type text'}
+                    keyboardType={'text'}
+                    inputContainer={{ marginBottom: responsiveHeight(3.5), width: '100%', height: responsiveHeight(6.5) }}
+                    heading={'Medication names & dose'}
+                    value='Lorem Ipsum...'
+                    //   onChange={text => onChangeText('email', text)}
+                    textStyle={{color: colors.primary, fontWeight: 'bold'}}
+                    />
+
+                <CustomInput
+                    placeholder={'Type text'}
+                    keyboardType={'text'}
+                    inputContainer={{ marginBottom: responsiveHeight(3.5), width: '100%', height: responsiveHeight(6.5) }}
+                    heading={'May be scared/startled by:'}
+                    value='Lorem Ipsum...'
+                    //   onChange={text => onChangeText('email', text)}
+                    textStyle={{color: colors.primary, fontWeight: 'bold'}}
+                    />
+
+
                     <CustomInput
                         heading={'Likes or dislike'}
                         placeholder={'Type message'}
@@ -99,8 +376,8 @@ const styles = StyleSheet.create({
         paddingTop: responsiveHeight(0),
     },
     subContainer: {
-        alignItems: 'center',
         paddingTop: responsiveHeight(4),
+        marginHorizontal: responsiveWidth(4),
     },
     addImageView: {
         borderWidth: 1.5,
@@ -114,7 +391,6 @@ const styles = StyleSheet.create({
         elevation: 7,
         backgroundColor: 'white',
         paddingVertical: responsiveHeight(4.4),
-        width: responsiveWidth(80),
         borderStyle: 'dashed',
         borderRadius: 10,
         alignItems: 'center',

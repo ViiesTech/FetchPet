@@ -44,7 +44,7 @@ const Signup = () => {
                 <CustomInput
                     placeholder={'User Name'}
                     inputContainer={{ marginBottom: responsiveHeight(3) }}
-                    heading={'Enter your name'}
+                    // heading={'Enter your name'}
                     value={form.email}
                     onChange={text => onChangeText('email', text)}
                 />
@@ -52,7 +52,7 @@ const Signup = () => {
                     placeholder={'Email'}
                     keyboardType={'email-address'}
                     inputContainer={{ marginBottom: responsiveHeight(3) }}
-                    heading={'Enter your email'}
+                    // heading={'Enter your email'}
                     value={form.email}
                     onChange={text => onChangeText('email', text)}
                 />
@@ -60,14 +60,14 @@ const Signup = () => {
                     placeholder={'Phone Number'}
                     keyboardType={'email-address'}
                     inputContainer={{ marginBottom: responsiveHeight(3) }}
-                    heading={'Enter your number'}
+                    // heading={'Enter your number'}
                     value={form.email}
                     onChange={text => onChangeText('email', text)}
                 />
                 <CustomInput
                     placeholder={'Password'}
                     secureTextEntry={true}
-                    heading={'Enter your password'}
+                    // heading={'Enter your password'}
                     inputContainer={{ marginBottom: responsiveHeight(3) }}
                     value={form.password}
                     onChange={text => onChangeText('password', text)}
@@ -75,7 +75,7 @@ const Signup = () => {
                 <CustomInput
                     placeholder={'Confirm Password'}
                     secureTextEntry={true}
-                    heading={'Confirm Password'}
+                    // heading={'Confirm Password'}
                 />
                 <CustomButton
                     btnText={'Sign up'}

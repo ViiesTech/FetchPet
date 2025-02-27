@@ -21,7 +21,7 @@ const Picker = ({ placeholder, items, setItems, heading }) => {
         open={open}
         value={value}
         items={items}
-        containerStyle={{ width: responsiveWidth(80) }}
+        // containerStyle={{ width: responsiveWidth(80) }}
         dropDownContainerStyle={styles.containerStyle}
         style={styles.drop}
         placeholder={placeholder}

@@ -7,6 +7,7 @@ import Information from '../../screens/main/customer/Information';
 import Home from '../../screens/main/common/Home';
 import DriverProfile from '../../screens/main/customer/DriverProfile';
 import BecomeDriver from '../../screens/main/customer/BecomeDriver';
+import ImmediateRide from '../../screens/main/customer/ImmediateRide';
 
 const Stack = createNativeStackNavigator();  
 const CustomerStack = () => {
@@ -14,6 +15,7 @@ const CustomerStack = () => {
         <Stack.Navigator screenOptions={{ headerShown: false }}>
             <Stack.Screen name='Home' component={Home} />
             <Stack.Screen name='BookRide' component={BookRide} />
+            <Stack.Screen name='ImmediateRide' component={ImmediateRide} />
             <Stack.Screen name='AvailableDrivers' component={AvailableDrivers} />
             <Stack.Screen name='Information' component={Information} />
             <Stack.Screen name='BookingConfirmed' component={BookingConfirmed} />

@@ -50,7 +50,7 @@ const styles = StyleSheet.create({
         paddingLeft: responsiveHeight(1.4),
         // gap: 10,
         // flexDirection: 'row',
-        width: responsiveWidth(80),
+        // width: responsiveWidth(80),
         borderWidth: 1.5,
         borderColor: colors.txtColor
     },

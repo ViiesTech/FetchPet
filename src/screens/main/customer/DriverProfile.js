@@ -92,7 +92,7 @@ const DriverProfile = ({ route }) => {
                         marginTop: responsiveHeight(3),
                         marginBottom: responsiveHeight(1.5),
                     }}>
-                    Features{' '}
+                    Pet Safety Features{' '}
                 </Text>
                 <FlatList
                     contentContainerStyle={{ justifyContent: 'space-between', gap: 15, }}

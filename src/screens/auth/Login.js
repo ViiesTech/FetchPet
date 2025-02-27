@@ -38,7 +38,7 @@ const Login = () => {
     <Container
       boldText={'Welcome Back!'}
       heading={true}
-      desc={'Take Better Care of Your Pets'}
+      desc={'Where pets ride with love!'}
       style={styles.container}>
       <View style={styles.subContainer}>
         <CustomInput

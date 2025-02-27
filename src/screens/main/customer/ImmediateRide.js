@@ -14,7 +14,7 @@ import { useNavigation } from '@react-navigation/native'
 import CheckBox from '../../../components/CheckBox'
 import LocationTwoInput from '../../../components/LocationTwoInputs'
 
-const BookRide = () => {
+const ImmediateRide = () => {
     const [selectedCategory, setSelectedCategory] = useState(0)
     const [ride, setRide] = useState(true)
 
@@ -22,7 +22,7 @@ const BookRide = () => {
 
     return (
         <MainContainer style={{ paddingBottom: responsiveHeight(10) }}>
-            <Header arrow={true} headerText={'Book a Ride'} />
+            <Header arrow={true} headerText={'Immediate Ride'} />
             <View style={styles.subContainer}>
                     <View>
                             <Text style={styles.headingStyle}>What is your location?</Text>
@@ -93,6 +93,7 @@ const BookRide = () => {
                     />
                      <CustomInput
                     placeholder={'Best Route'}
+                    icon={true}
                     keyboardType={'text'}
                     inputContainer={{ marginBottom: responsiveHeight(3), width: '100%', height: responsiveHeight(6.5) }}
                     heading={'Select Best Route'}
@@ -105,7 +106,7 @@ const BookRide = () => {
                     placeholder={'music type'}
                     keyboardType={'text'}
                     inputContainer={{ marginBottom: responsiveHeight(3), width: '100%', height: responsiveHeight(6.5) }}
-                    heading={'Quite ride'}
+                    heading={'Sound Preferences'}
                     value='music type'
                     //   onChange={text => onChangeText('email', text)}
                     textStyle={{color: colors.primary, fontWeight: 'bold'}}
@@ -123,13 +124,6 @@ const BookRide = () => {
                         heading={'Request for photo updates to the pet profile'}
                     />
                     
-                    <DatePicker heading={'Select Date'} value={'11/11/2024'} />
-                    <Picker
-                        items={timings}
-                        placeholder={'10:00 Am'}
-                        heading={'Select Time'}
-                    />
-
                 <CustomInput
                     placeholder={'What type'}
                     keyboardType={'text'}
@@ -156,14 +150,13 @@ const BookRide = () => {
                     textStyle={{color: colors.primary, fontWeight: 'bold'}}
                     />   
                 </View>
-                <CustomButton onPress={() => navigation.navigate('ImmediateRide')} style={{ marginTop: responsiveHeight(2), width: responsiveWidth(90), backgroundColor: 'red' }} btnText={'Immediate Ride'} />
                 <CustomButton onPress={() => navigation.navigate('AvailableDrivers')} style={{ marginTop: responsiveHeight(2), width: responsiveWidth(90) }} icon={icons.buttonHeart} btnText={'View Available Drivers'} />
             </View>
         </MainContainer>
     )
 }
 
-export default BookRide
+export default ImmediateRide
 
 const styles = StyleSheet.create({
     subContainer: {

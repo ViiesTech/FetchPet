@@ -80,9 +80,8 @@ const Home = () => {
         <Text style={styles.heading}>Which Service Do You Need?</Text>
         <FlatList
           data={services}
-          numColumns={2}
-          contentContainerStyle={{ paddingTop: responsiveHeight(2.5) }}
-          columnWrapperStyle={{ justifyContent: 'space-between' }}
+          horizontal
+          contentContainerStyle={{ paddingTop: responsiveHeight(2.5), gap: 10 }}
           renderItem={({ item, index }) => {
             return (
               <ServiceCard onPress={() => {
@@ -161,7 +160,9 @@ const Home = () => {
               <>
                 {renderServices()}
                 {renderTopProfiles()}
-                <CustomButton onPress={() => navigation.navigate('BecomeDriver')} style={{ marginTop: responsiveHeight(2), width: responsiveWidth(89) }} icon={icons.buttonHeart} btnText={'Become A Driver'} />
+                <CustomButton onPress={() => navigation.navigate('BecomeDriver')} style={{ marginTop: responsiveHeight(2), width: responsiveWidth(89) }} icon={icons.buttonHeart} btnText={'Pawsitive Community Board'} />
+                <CustomButton onPress={() => navigation.navigate('BecomeDriver')} style={{ marginTop: responsiveHeight(2), width: responsiveWidth(89) }}  btnText={'Become A Volunteer'} />
+                <CustomButton onPress={() => navigation.navigate('BecomeDriver')} style={{ marginTop: responsiveHeight(2), width: responsiveWidth(89) }}  btnText={'Become A Foster'} />
               </>
             }
           </View>

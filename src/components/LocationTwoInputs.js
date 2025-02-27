@@ -5,7 +5,7 @@ import colors from '../assets/colors';
 import { responsiveFontSize, responsiveHeight, responsiveWidth } from '../utils';
 import icons from '../assets/icons';
 
-const CustomInput = ({
+const LocationTwoInput = ({
     style,
     value,
     placeholder,
@@ -18,18 +18,16 @@ const CustomInput = ({
     textStyle,
     alignVertical,
     editable,
-    multiline,
-    numberOfLines
+    multiline
 }) => {
     return (
         <>
-            {heading && <Text style={[styles.headingStyle, textStyle]}>{heading}</Text>}
             <View style={[styles.inputView, icon || secureTextEntry ? { flexDirection: 'row', alignItems: 'center', } : null, inputContainer]}>
-                {/* {icon &&
+                {icon &&
                     <View style={{ paddingLeft: responsiveHeight(1.2) }}>
                         <SVGIcons image={icons.location} />
                     </View>
-                } */}
+                }
                 <TextInput
                     secureTextEntry={secureTextEntry}
                     keyboardType={keyboardType}
@@ -37,17 +35,11 @@ const CustomInput = ({
                     editable={editable}
                     textAlignVertical={alignVertical}
                     multiline={multiline}
-                    numberOfLines={numberOfLines}
                     placeholder={placeholder}
                     placeholderTextColor={colors.gray2}
                     onChangeText={onChange}
                     style={[styles.input, style]}
                 />
-                {icon &&
-                    <TouchableOpacity style={{ paddingRight: responsiveHeight(2) }} onPress={() => alert('working in progress')}>
-                        <SVGIcons image={icons.marker} />
-                    </TouchableOpacity>
-                }
                 {secureTextEntry &&
                     <TouchableOpacity style={{ paddingRight: responsiveHeight(2) }}>
                         <SVGIcons image={icons.eyes2} />
@@ -58,25 +50,20 @@ const CustomInput = ({
     );
 };
 
-export default CustomInput;
+export default LocationTwoInput;
 
 const styles = StyleSheet.create({
     inputView: {
         borderColor: colors.black,
-        borderRadius: 100,
+        borderRadius: 10,
         borderWidth: 1.5,
-        width: responsiveWidth(80),
+        width: responsiveWidth(43),
         paddingVertical: responsiveHeight(0.2),
     },
     input: {
-        paddingLeft: responsiveHeight(2.5),
+        // paddingLeft: responsiveHeight(2.5),
         color: colors.black,
         flex: 1,
     },
-    headingStyle: {
-        marginBottom: responsiveHeight(1),
-        fontSize: responsiveFontSize(2),
-        color: colors.black,
-        fontWeight: '500'
-    },
+   
 });

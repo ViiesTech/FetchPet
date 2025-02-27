@@ -47,9 +47,14 @@ export const services = [
         text: 'Book A Car'
     },
     {
-        id: 1,
+        id: 2,
         image: images.pet,
         text: 'Rescues'
+    },
+    {
+        id: 3,
+        image: images.pet,
+        text: 'Pet Professional'
     }
 ]
 

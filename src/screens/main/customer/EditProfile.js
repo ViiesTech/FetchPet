@@ -2,7 +2,7 @@ import { Image, StyleSheet, TouchableOpacity, View } from 'react-native'
 import React, { useEffect, useState } from 'react'
 import MainContainer from '../../../components/MainContainer'
 import Header from '../../../components/Header'
-import { petExp, prices, responsiveHeight, responsiveWidth } from '../../../utils'
+import { petExp, prices, responsiveHeight, responsiveWidth, vehicles } from '../../../utils'
 import images from '../../../assets/images'
 import SVGIcons from '../../../components/SVGIcons'
 import icons from '../../../assets/icons'
@@ -11,6 +11,7 @@ import CustomButton from '../../../components/CustomButton'
 import { useNavigation } from '@react-navigation/native'
 import AsyncStorage from '@react-native-async-storage/async-storage'
 import Picker from '../../../components/Picker'
+import colors from '../../../assets/colors'
 
 const EditProfile = () => {
     const [role, setRole] = useState(null)
@@ -31,7 +32,7 @@ const EditProfile = () => {
         <MainContainer>
             <Header headerText={'Edit Profile'} arrow={true} hideUser={true} />
             <View style={styles.subContainer}>
-                <View>
+                <View style={{alignItems: 'center'}}>
                     <Image source={images.profile12} style={styles.imageStyle} />
                     <TouchableOpacity style={styles.addWrapper}>
                         <SVGIcons width={responsiveHeight(15)} image={icons.add} />
@@ -39,20 +40,38 @@ const EditProfile = () => {
                 </View>
                 <View style={styles.inputWrapper}>
                     <CustomInput
+                        textStyle={{color: colors.primary, fontWeight: 'bold'}}
                         heading={'Your Full Name'}
-                        inputContainer={{ marginBottom: responsiveHeight(2.5) }}
+                        inputContainer={{width: '100%', marginBottom: responsiveHeight(2.5) }}
                         placeholder={'Alicia John'}
                     />
                     <CustomInput
+                        textStyle={{color: colors.primary, fontWeight: 'bold'}}
+                        heading={'Home Address'}
+                        editable={false}
+                        secureTextEntry={true}
+                        inputContainer={{width: '100%', marginBottom: responsiveHeight(2.5) }}
+                        placeholder={'*******'}
+                    />
+                    <CustomInput
+                        textStyle={{color: colors.primary, fontWeight: 'bold'}}
+                        heading={'Phone Number'}
+                        keyboardType={'numeric'}
+                        inputContainer={{width: '100%', marginBottom: responsiveHeight(2.5) }}
+                        placeholder={'123-456-7890'}
+                    />
+                    <CustomInput
+                        textStyle={{color: colors.primary, fontWeight: 'bold'}}
                         heading={'Email Address'}
                         editable={false}
-                        inputContainer={{ marginBottom: responsiveHeight(2.5) }}
+                        inputContainer={{width: '100%', marginBottom: responsiveHeight(2.5) }}
                         placeholder={'aliciajohn456@gmail.com'}
                     />
                     <CustomInput
-                        heading={'Your Number'}
+                        textStyle={{color: colors.primary, fontWeight: 'bold'}}
+                        heading={'Emergency Number'}
                         keyboardType={'numeric'}
-                        inputContainer={{ marginBottom: responsiveHeight(2.5) }}
+                        inputContainer={{width: '100%', marginBottom: responsiveHeight(2.5) }}
                         placeholder={'123-456-7890'}
                     />
                     {role === 'Driver' &&
@@ -69,16 +88,44 @@ const EditProfile = () => {
                     />
                     </>
                     }
+
+                    <Picker
+                        items={vehicles}
+                        placeholder={'Yes'}
+                        heading={'if user wishes to round up fares automatically.'}
+                    />
+
+                    <Picker
+                        items={vehicles}
+                        placeholder={'Name of shelter or rescue...'}
+                        heading={'Name of shelter or rescue that you wish to donate'}
+                    />
+
+                    <Picker
+                        items={vehicles}
+                        placeholder={'Lorem ipsum...'}
+                        heading={'Communication preference selection'}
+                    />
+
                     <CustomInput
-                        textStyle={{ width: responsiveWidth(78) }}
-                        heading={'What is your location?'}
-                        inputContainer={{ marginBottom: responsiveHeight(4) }}
+                        textStyle={{ width: responsiveWidth(78), color: colors.primary, fontWeight: 'bold' }}
+                        heading={'Full Address'}
+                        inputContainer={{width: '100%', marginBottom: responsiveHeight(2.5) }}
                         placeholder={'Los Angeles...'}
                         icon={true}
                     />
-                    <CustomButton style={{ marginBottom: responsiveHeight(1.5) }} btnText={'Update Profile'} />
+
+                    <CustomInput
+                        textStyle={{color: colors.primary, fontWeight: 'bold'}}
+                        heading={'Sound Preference'}
+                        keyboardType={'text'}
+                        inputContainer={{width: '100%', marginBottom: responsiveHeight(2.5) }}
+                        placeholder={'Light Music'}
+                    />
+
+                    <CustomButton style={{ marginBottom: responsiveHeight(1.5),  width: responsiveWidth(90) }} btnText={'Update Profile'} />
                     {role === 'Customer' &&
-                        <CustomButton onPress={() => navigation.navigate('AddPet', { type: 'edit' })} btnText={'Edit Pet Info'} />
+                        <CustomButton style={{marginBottom: responsiveHeight(1.5), width: responsiveWidth(90) }} onPress={() => navigation.navigate('AddPet', { type: 'edit' })} btnText={'Edit Pet Info'} />
                     }
                 </View>
             </View>
@@ -91,8 +138,9 @@ export default EditProfile
 
 const styles = StyleSheet.create({
     subContainer: {
-        alignItems: 'center',
-        paddingTop: responsiveHeight(3)
+        // alignItems: 'center',
+        paddingTop: responsiveHeight(3),
+        marginHorizontal: responsiveWidth(4),
     },
     imageStyle: {
         height: responsiveHeight(14),
@@ -102,7 +150,7 @@ const styles = StyleSheet.create({
     addWrapper: {
         position: 'absolute',
         bottom: -5,
-        left: responsiveHeight(2),
+        right: responsiveHeight(11),
         borderRadius: 100,
         padding: 5,
     },

@@ -1,5 +1,6 @@
 import { Animated, Image, ImageBackground, StyleSheet, Text, View } from 'react-native'
 import React, { useEffect, useRef } from 'react'
+import {TouchableOpacity} from 'react-native';
 import colors from '../../assets/colors'
 import { responsiveFontSize, responsiveHeight } from '../../utils'
 import CustomButton from '../../components/CustomButton'
@@ -41,19 +42,36 @@ const GetStarted = () => {
                 </Animated.View>
                 <Animated.View style={[styles.content, { opacity: contentOpacity }]}>
                     <Text style={styles.heading}>Welcome To Fech!</Text>
-                    <Text style={styles.subHeading}>Take Better Care of Your Pets</Text>
+                    <Text style={styles.subHeading}>Join Fech Family</Text>
                     <CustomButton
                         textStyle={{ color: colors.primary, fontWeight: 'bold' }}
                         onPress={() => onChooseRole('Customer')}
-                        btnText={'STARTED AS PET PARENTS'}
+                        btnText={'SIGN IN AS PET CHAMPION'}
                         style={[styles.buttonStyle, { marginTop: responsiveHeight(4), marginBottom: responsiveHeight(2.5) }]}
                     />
                     <CustomButton
                         textStyle={{ color: colors.primary, fontWeight: 'bold' }}
                         onPress={() => onChooseRole('Driver')}
-                        btnText={'STARTED AS DRIVER'}
-                        style={styles.buttonStyle}
+                        btnText={'SIGN IN AS PROFESSIONAL DRIVER'}
+                        style={[styles.buttonStyle, { marginBottom: responsiveHeight(2.5) }]}
                     />
+                    <CustomButton
+                        textStyle={{ color: colors.primary, fontWeight: 'bold' }}
+                        onPress={() => onChooseRole('Rescue')}
+                        btnText={'SIGN IN AS PET RESCUE'}
+                        style={[styles.buttonStyle, { marginBottom: responsiveHeight(2.5) }]}
+                    />
+                    <CustomButton
+                        textStyle={{ color: colors.primary, fontWeight: 'bold' }}
+                        onPress={() => onChooseRole('Professional')}
+                        btnText={'SIGN IN AS PET PROFESSIONAL'}
+                        style={[styles.buttonStyle, { marginBottom: responsiveHeight(2.5) }]}
+                    />
+                    <View style={{alignItems: 'flex-end'}}>
+                    <TouchableOpacity>
+                    <Text style={[styles.subHeading, {borderBottomWidth: 1, borderBottomColor: 'white'}]}>Admin Login</Text>
+                    </TouchableOpacity>
+                    </View>
                 </Animated.View>
             </View>
         </ImageBackground>
@@ -64,7 +82,7 @@ export default GetStarted
 
 const styles = StyleSheet.create({
     subContainer: {
-        flex: 0.8,
+        flex: 1,
         justifyContent: 'center',
         alignItems: 'center'
     },
