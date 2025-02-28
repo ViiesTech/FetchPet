@@ -22,7 +22,7 @@ const Profile = ({ route }) => {
           <Image style={styles.imageStyle} source={images.profile12} />
           <View style={{ marginLeft: responsiveHeight(2) }}>
             <Text style={styles.nameStyle}>Emma Phillips</Text>
-            <Text style={styles.designation}>{type === 'Driver' ? 'Driver' : 'Pet Parent'}</Text>
+            <Text style={styles.designation}>{type === 'Driver' ? 'Driver' : 'Pet Champion'}</Text>
           </View>
         </View>
         <View style={{ flexDirection: 'row', alignItems: 'center', gap: 10, paddingTop: responsiveHeight(3) }}>
@@ -60,22 +60,22 @@ const Profile = ({ route }) => {
                 }}
                   style={[
                     styles.contentWrapper,
-                    index == 4 && {
+                    index == 8 && {
                       paddingTop: responsiveHeight(2)
                     }
                   ]}
                 >
-                  <SVGIcons width={item.id == 4 && responsiveWidth(4)} image={item.icon} />
+                  <SVGIcons width={item.id == 8 && responsiveWidth(8)} image={item.icon} />
                   <Text
                     style={[
                       styles.settingsTitle,
-                      { color: index === 4 ? colors.red : colors.primary },
+                      { color: index === 8 ? colors.red : colors.primary },
                     ]}
                   >
                     {item.text}
                   </Text>
                 </TouchableOpacity>
-                {index === 3 && (
+                {index === 7 && (
                   <View style={styles.separator} />
                 )}
               </React.Fragment>

@@ -9,6 +9,7 @@ import About from '../screens/main/common/About';
 import FavouritesDriver from '../screens/main/customer/FavouritesDriver';
 import EditProfile from '../screens/main/customer/EditProfile';
 import AddPetInfo from '../screens/main/customer/AddPet';
+import PetRescuesStack from './petRescues/PetRescuesStack';
 
 const Stack = createNativeStackNavigator();
 const Routes = () => {
@@ -20,6 +21,7 @@ const Routes = () => {
                     <Stack.Screen name={'AuthStack'} component={AuthStack} />
                     <Stack.Screen name={'CustomerStack'} component={CustomerStack} />
                     <Stack.Screen name={'DriverStack'} component={DriverStack} />
+                    <Stack.Screen name={'PetRescuesStack'} component={PetRescuesStack} />
                     <Stack.Screen name='AddPet' component={AddPetInfo} />
                     <Stack.Screen name='Profile' component={Profile} />
                     <Stack.Screen name='EditProfile' component={EditProfile} />

@@ -352,15 +352,117 @@ const AddPetInfo = ({ route }) => {
                     textStyle={{color: colors.primary, fontWeight: 'bold'}}
                     />
 
+                    <Picker
+                        items={agePicker}
+                        placeholder={'Yes'}
+                        heading={'Commands/gestures known:'}
+                    />
+
+                    <Picker
+                        items={agePicker}
+                        placeholder={'Yes'}
+                        heading={'Any known aggressions'}
+                    />
+
+                    <Picker
+                        items={agePicker}
+                        placeholder={'No'}
+                        heading={'Walks required'}
+                    />
+
+                <CustomInput
+                    placeholder={'Type text'}
+                    keyboardType={'text'}
+                    inputContainer={{ marginBottom: responsiveHeight(3.5), width: '100%', height: responsiveHeight(6.5) }}
+                    heading={'Add exercise times'}
+                    value='Lorem Ipsum...'
+                    //   onChange={text => onChangeText('email', text)}
+                    textStyle={{color: colors.primary, fontWeight: 'bold'}}
+                    />
+
+                <Picker
+                        items={agePicker}
+                        placeholder={'Yes'}
+                        heading={'Morning walks'}
+                    />
+
+                <Picker
+                        items={agePicker}
+                        placeholder={'Athletic'}
+                        heading={'Selection of all Pet Temperament that apply to pet:'}
+                    />
+
+                <Picker
+                        items={agePicker}
+                        placeholder={'Talk'}
+                        heading={'Sound preference'}
+                    />
+
+                <Picker
+                        items={agePicker}
+                        placeholder={'Yes'}
+                        heading={'Photo updates required'}
+                    />
+
+                <Picker
+                        items={agePicker}
+                        placeholder={'Yes'}
+                        heading={'Restraint Provided:'}
+                    />
+
+                <Picker
+                        items={agePicker}
+                        placeholder={'No'}
+                        heading={'request for written report card'}
+                    />
+
+                <CustomInput
+                    placeholder={'Type text'}
+                    keyboardType={'text'}
+                    inputContainer={{ marginBottom: responsiveHeight(3.5), width: '100%', height: responsiveHeight(6.5) }}
+                    heading={'Other routine notes:'}
+                    value='Lorem Ipsum...'
+                    //   onChange={text => onChangeText('email', text)}
+                    textStyle={{color: colors.primary, fontWeight: 'bold'}}
+                    />
+
+                <CustomInput
+                    placeholder={'Type text'}
+                    keyboardType={'text'}
+                    inputContainer={{ marginBottom: responsiveHeight(3.5), width: '100%', height: responsiveHeight(6.5) }}
+                    heading={'How to calm:'}
+                    value='Lorem Ipsum...'
+                    //   onChange={text => onChangeText('email', text)}
+                    textStyle={{color: colors.primary, fontWeight: 'bold'}}
+                    />
+
+                <Picker
+                        items={agePicker}
+                        placeholder={'Must be left outside'}
+                        heading={'Toilet behaviors:'}
+                    />
+
+                <Picker
+                        items={agePicker}
+                        placeholder={'Indoor only'}
+                        heading={'Exposure to outdoor:'}
+                    />
+
+                <Picker
+                        items={agePicker}
+                        placeholder={'gets underfoot'}
+                        heading={'Add behaviors:'}
+                    />
 
                     <CustomInput
                         heading={'Likes or dislike'}
                         placeholder={'Type message'}
                         multiline={true}
+                        textStyle={{color: colors.primary, fontWeight: 'bold'}}
                         alignVertical={'top'}
-                        inputContainer={{ height: responsiveHeight(10), borderRadius: 5 }}
+                        inputContainer={{ height: responsiveHeight(10), width:'100%', borderRadius: 5 }}
                     />
-                    <CustomButton btnText={screenType === 'edit' ? 'Update' : 'Submit'} icon={true} style={{ marginTop: responsiveHeight(4) }} />
+                    <CustomButton btnText={screenType === 'edit' ? 'Update Pet Info' : 'Submit'} icon={true} style={{ marginTop: responsiveHeight(4), width: '100%', }} />
                 </View>
             </View>
         </MainContainer>

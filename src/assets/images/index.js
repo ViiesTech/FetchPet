@@ -36,4 +36,11 @@ export default {
     slide3: require('../images/slideBg3.jpeg'),
     slide4: require('../images/slideBg4.png'),
     about: require('../images/aboutImage.png'),
+    rescueOne: require('../images/rescue1.png'),
+    rescueTwo: require('../images/rescue2.png'),
+    dogOne: require('../images/image(1).png'),
+    dogTwo: require('../images/image(2).png'),
+    dogThree: require('../images/image(3).png'),
+    dogFour: require('../images/image(4).png'),
+    dogFoot: require('../images/Group(2).png'),
 }

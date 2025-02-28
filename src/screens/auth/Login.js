@@ -29,8 +29,10 @@ const Login = () => {
     const role = await AsyncStorage.getItem('userType')
    if(role === 'Customer') { 
     navigation.navigate('CustomerStack')
-  } else {
+  } else if(role === 'Driver') {
     navigation.navigate('DriverStack')
+  }else if(role === 'Rescue'){
+    navigation.navigate('PetRescuesStack')
   }
 } 
 

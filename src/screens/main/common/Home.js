@@ -160,7 +160,7 @@ const Home = () => {
               <>
                 {renderServices()}
                 {renderTopProfiles()}
-                <CustomButton onPress={() => navigation.navigate('BecomeDriver')} style={{ marginTop: responsiveHeight(2), width: responsiveWidth(89) }} icon={icons.buttonHeart} btnText={'Pawsitive Community Board'} />
+                <CustomButton onPress={() => navigation.navigate('PawsitiveCommunity')} style={{ marginTop: responsiveHeight(2), width: responsiveWidth(89) }} icon={icons.buttonHeart} btnText={'Pawsitive Community Board'} />
                 <CustomButton onPress={() => navigation.navigate('BecomeDriver')} style={{ marginTop: responsiveHeight(2), width: responsiveWidth(89) }}  btnText={'Become A Volunteer'} />
                 <CustomButton onPress={() => navigation.navigate('BecomeDriver')} style={{ marginTop: responsiveHeight(2), width: responsiveWidth(89) }}  btnText={'Become A Foster'} />
               </>
