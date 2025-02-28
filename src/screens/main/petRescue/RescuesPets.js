@@ -8,6 +8,7 @@ import Header from '../../../components/Header'
 import icons from '../../../assets/icons'
 import SVGIcons from '../../../components/SVGIcons'
 import images from '../../../assets/images'
+import { useNavigation } from '@react-navigation/native'
 
 const categoriesData = [
   {id: 1, icon: icons.menu, name: '', bgColor: 'white', borderWidth: 1, borderColor: colors.line_color, nameColor: colors.primary, mrgnTp: responsiveHeight(0.3)},
@@ -26,6 +27,7 @@ const rescuesData = [
 
 const RescuesPets = () => {
     const [type, setType] = useState('')
+    const navigation = useNavigation()
   
     useEffect(() => {
       fetchUserRole()
@@ -50,7 +52,7 @@ const RescuesPets = () => {
           contentContainerStyle={{gap: 15}}
           renderItem={({item}) => {
             return (
-              <TouchableOpacity style={{width: responsiveHeight(10), borderRadius: 5, justifyContent: 'center', alignItems: 'center', height: responsiveHeight(10), backgroundColor: item.bgColor, borderWidth: item.borderWidth, borderColor: item.borderColor}}>
+              <TouchableOpacity onPress={() => navigation.navigate('ShelterProfile')} style={{width: responsiveHeight(10), borderRadius: 5, justifyContent: 'center', alignItems: 'center', height: responsiveHeight(10), backgroundColor: item.bgColor, borderWidth: item.borderWidth, borderColor: item.borderColor}}>
                     <SVGIcons image={item.icon} width={60} height={50} />
                     {item.name && <Text style={{color: item.nameColor, fontWeight: 'bold', marginTop: item.mrgnTp}}>{item.name}</Text>}
               </TouchableOpacity>
@@ -82,7 +84,9 @@ const RescuesPets = () => {
                     <View>
                       <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
                       <Text style={{color: '#fff'}}>{item.title}</Text>
-                        <SVGIcons image={icons.heart2} />
+                      <TouchableOpacity style={{backgroundColor: '#fff', height: 24, borderRadius: 50, justifyContent: 'center', alignItems: 'center'}}>
+                        <SVGIcons image={icons.heart_blue} />
+                      </TouchableOpacity>
                       </View>
                     <Text style={{color: '#f5f5f5', fontSize: 10, marginTop: responsiveHeight(0.5)}}>{item.subTitle}</Text>
                     </View>
@@ -96,7 +100,7 @@ const RescuesPets = () => {
                       <Image source={item.petImg} />
                     </View>
 
-                    <TouchableOpacity style={{backgroundColor: 'white', width: responsiveWidth(20), height: responsiveHeight(3.5), justifyContent: 'center', alignItems: 'center', borderRadius: 8}}>
+                    <TouchableOpacity onPress={() => navigation.navigate('DogProfileDetails', {petImg:item.petImg, petName: item.title })} style={{backgroundColor: 'white', width: responsiveWidth(20), height: responsiveHeight(3.5), justifyContent: 'center', alignItems: 'center', borderRadius: 8}}>
                       <Text style={{fontSize: 9, color: colors.primary, fontWeight: 'bold'}}>View Details</Text>
                     </TouchableOpacity>
                       <Image source={images.dogFoot} style={{position: 'absolute', top: responsiveHeight(6.5)}}  />

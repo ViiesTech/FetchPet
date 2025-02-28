@@ -43,4 +43,6 @@ export default {
     dogThree: require('../images/image(3).png'),
     dogFour: require('../images/image(4).png'),
     dogFoot: require('../images/Group(2).png'),
+    dogSmallFoot: require('../images/dogSmallFoot.png'),
+    book_calendar: require('../images/bookCalendar.png'),
 }
