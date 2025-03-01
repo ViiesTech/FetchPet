@@ -60,22 +60,22 @@ const Profile = ({ route }) => {
                 }}
                   style={[
                     styles.contentWrapper,
-                    index == 8 && {
+                    index == 10 && {
                       paddingTop: responsiveHeight(2)
                     }
                   ]}
                 >
-                  <SVGIcons width={item.id == 8 && responsiveWidth(8)} image={item.icon} />
+                  <SVGIcons width={item.id == 12 && responsiveWidth(12)} image={item.icon} />
                   <Text
                     style={[
                       styles.settingsTitle,
-                      { color: index === 8 ? colors.red : colors.primary },
+                      { color: index === 10 ? colors.red : colors.primary },
                     ]}
                   >
                     {item.text}
                   </Text>
                 </TouchableOpacity>
-                {index === 7 && (
+                {index === 9 && (
                   <View style={styles.separator} />
                 )}
               </React.Fragment>

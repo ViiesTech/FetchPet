@@ -9,6 +9,7 @@ import DriverProfile from '../../screens/main/customer/DriverProfile';
 import BecomeDriver from '../../screens/main/customer/BecomeDriver';
 import ImmediateRide from '../../screens/main/customer/ImmediateRide';
 import PawsitiveCommunity from '../../screens/main/customer/PawsitiveCommunity';
+import FutureBookings from '../../screens/main/customer/FutureBookings';
 
 const Stack = createNativeStackNavigator();  
 const CustomerStack = () => {
@@ -23,6 +24,7 @@ const CustomerStack = () => {
             <Stack.Screen name='DriverProfile' component={DriverProfile} />
             <Stack.Screen name='BecomeDriver' component={BecomeDriver} />
             <Stack.Screen name='PawsitiveCommunity' component={PawsitiveCommunity} />
+            <Stack.Screen name='FutureBookings' component={FutureBookings} />
         </Stack.Navigator>
     );
 };

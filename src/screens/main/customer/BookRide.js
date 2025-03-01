@@ -136,6 +136,7 @@ const BookRide = () => {
                     heading={'What type of restraint will be provided for the transportation.'}
                     multiline={true}
                     numberOfLines={4}
+                    alignVertical='top'
                     style={{height: responsiveHeight(15)}}
                     inputContainer={{height: responsiveHeight(12), marginBottom: responsiveHeight(3), width: '100%', borderRadius: 10}}
                     value='Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type'
@@ -149,6 +150,7 @@ const BookRide = () => {
                     heading={'Additional comment or request box'}
                     multiline={true}
                     numberOfLines={4}
+                    alignVertical='top'
                     style={{height: responsiveHeight(15)}}
                     inputContainer={{height: responsiveHeight(12),marginBottom: responsiveHeight(3), width: '100%', borderRadius: 10}}
                     value='Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type'

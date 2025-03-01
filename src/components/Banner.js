@@ -30,12 +30,18 @@ const Banner = ({ onPress, type }) => {
                 style={StyleSheet.absoluteFill}
               />
               {index === 0 && type !== 'Driver' ? (
-                <View style={{ padding: responsiveHeight(2.5) }}>
-                  <Text style={styles.cardText}>{'Safe Travels, Happy Pets.'}
-                  </Text>
-                  <TouchableOpacity onPress={onPress} style={styles.rideButton}>
-                    <Text style={styles.textStyle}>Book A Ride</Text>
-                  </TouchableOpacity>
+                // <View style={{ padding: responsiveHeight(2.5) }}>
+                //   <Text style={styles.cardText}>{'Safe Travels, Happy Pets.'}
+                //   </Text>
+                //   <TouchableOpacity onPress={onPress} style={styles.rideButton}>
+                //     <Text style={styles.textStyle}>Book A Ride</Text>
+                //   </TouchableOpacity>
+                // </View>
+                <View style={{ padding: responsiveHeight(2.5), flexDirection: 'row', alignItems: 'center', gap: 10, }}>
+                  <View style={{borderWidth: 2, borderColor: 'white', borderRadius: 100, padding: 4}}>
+                  <Image source={images.dogOne}  style={{width: 90, height: 90, borderRadius: 100,}}/>
+                  </View>
+                    <Text style={styles.textStyle}>Fluffy</Text>
                 </View>
               ) : (
                 <>
@@ -118,8 +124,9 @@ const styles = StyleSheet.create({
     padding: responsiveHeight(1)
   },
   textStyle: {
-    color: colors.primary,
-    fontSize: responsiveFontSize(1.8)
+    color: 'white',
+    fontSize: responsiveFontSize(1.9),
+    fontWeight: 'bold'
   },
   cardText: {
     color: colors.secondary,

@@ -278,6 +278,7 @@ const RideCar = ({route}) => {
                 <CustomInput icon={true}  placeholder={'Los Angeles'} heading={'Pickup Location'} inputContainer={{borderColor: colors.primary, width: responsiveWidth(90)}} />
                 </View>
                 <CustomButton onPress={() => navigation.navigate('BookingConfirmed')} icon={icons.buttonHeart} btnText={'Confirm Booking'} style={{ marginTop: responsiveHeight(4), width: responsiveWidth(90) }} />
+                <CustomButton onPress={() => navigation.navigate('FutureBookings')} btnText={'Future Booking'} style={{ marginTop: responsiveHeight(4), width: responsiveWidth(90) }} />
             </View>
         </MainContainer>
     );
