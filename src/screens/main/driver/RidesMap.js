@@ -39,8 +39,8 @@ const RidesMap = ({ route }) => {
       setIsAccepted(false)
     }
     return (
-      <View style={[styles.cardView, { top: isAccepted ? responsiveHeight(51) : responsiveHeight(46) }]}>
-        <IncomingRidesCard onAction={() => onButtonPress()} date={data.date} time={data.time} weight={data.weight} age={data.age} onStartRyde={() => onStartRide()} accepted={isAccepted} onAcceptPress={() => onAcceptRide()} incoming={true} distance={data.distance} image={data.image} name={data.name} style={{ borderWidth: 0 }} />
+      <View style={[styles.cardView, { top: isAccepted ? responsiveHeight(45) : responsiveHeight(46) }]}>
+        <IncomingRidesCard onAction={() => onButtonPress()} date={data.date} time={data.time} weight={data.weight} age={data.age} onStartRyde={() => onStartRide()} accepted={isAccepted} onAcceptPress={() => onAcceptRide()} incoming={true} distance={data.distance} image={data.image} name={data.name} style={{ borderWidth: 0, }} />
       </View>
     )
   }
@@ -49,9 +49,9 @@ const RidesMap = ({ route }) => {
   const renderRideStartedCard = () => {
     return (
       <View style={styles.startedView}>
-        <Text style={styles.heading}>Your Ryde has started</Text>
+        <Text style={styles.heading}>Your Ride Has Started</Text>
         <RideStartedCard name={data?.name} image={data?.image} style={{ marginTop: responsiveHeight(1.5), marginBottom: responsiveHeight(3) }} />
-        <CustomButton onPress={() => navigation.navigate('RideComplete')} style={{ paddingVertical: responsiveHeight(2.5), borderRadius: 15, width: responsiveWidth(83) }} btnText={'Ride Completed'} />
+        <CustomButton onPress={() => navigation.navigate('RideComplete')} textStyle={{fontWeight: 'bold'}} style={{ paddingVertical: responsiveHeight(2.5), borderRadius: 15, width: responsiveWidth(83) }} btnText={'RIDE COMPLETED'} />
       </View>
     )
   }

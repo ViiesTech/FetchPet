@@ -3,7 +3,7 @@ import React from 'react';
 import MainContainer from '../../../components/MainContainer';
 import Header from '../../../components/Header';
 import images from '../../../assets/images';
-import { profileSettings, responsiveFontSize, responsiveHeight, responsiveWidth } from '../../../utils';
+import { profileSettings, responsiveFontSize, responsiveHeight, responsiveWidth, setting } from '../../../utils';
 import colors from '../../../assets/colors';
 import SVGIcons from '../../../components/SVGIcons';
 import icons from '../../../assets/icons';
@@ -47,7 +47,38 @@ const Profile = ({ route }) => {
           </View>
         }
         <View style={{ paddingTop: type === 'Driver' ? responsiveHeight(4) : responsiveHeight(6) }}>
-          {profileSettings.map((item, index) => {
+          {setting[`${type}`].map((item, index) => {
+
+                const extraHeight = (index) => {
+                  if(index == 9 && type === 'Driver'){
+                    return true
+                  }else if(index == 10 && type === 'Customer'){
+                    return true
+                  }else if(index == 10 && type === 'Rescue'){
+                    return true
+                  }
+                }   
+                
+                const extraRedText = (index) => {
+                  if(index === 9 && type === 'Driver'){
+                    return true
+                  }else if(index === 10 && type === 'Customer'){
+                    return true
+                  }else if(index == 10 && type === 'Rescue'){
+                    return true
+                  }
+                }  
+                
+                const spaceBar = (index) => {
+                  if(index === 8 && type === 'Driver'){
+                    return true
+                  }else if(index === 9 && type === 'Customer'){
+                    return true
+                  }else if(index == 9 && type === 'Rescue'){
+                    return true
+                  }
+                }  
+
             return (
               <React.Fragment key={index}>
                 <TouchableOpacity onPress={() => {
@@ -60,7 +91,7 @@ const Profile = ({ route }) => {
                 }}
                   style={[
                     styles.contentWrapper,
-                    index == 10 && {
+                    extraHeight(index) && {
                       paddingTop: responsiveHeight(2)
                     }
                   ]}
@@ -69,13 +100,13 @@ const Profile = ({ route }) => {
                   <Text
                     style={[
                       styles.settingsTitle,
-                      { color: index === 10 ? colors.red : colors.primary },
+                      { color: extraRedText(index) ? colors.red : colors.primary },
                     ]}
                   >
                     {item.text}
                   </Text>
                 </TouchableOpacity>
-                {index === 9 && (
+                {spaceBar(index) && (
                   <View style={styles.separator} />
                 )}
               </React.Fragment>

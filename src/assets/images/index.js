@@ -45,4 +45,5 @@ export default {
     dogFoot: require('../images/Group(2).png'),
     dogSmallFoot: require('../images/dogSmallFoot.png'),
     book_calendar: require('../images/bookCalendar.png'),
+    chart: require('../images/chart.png'),
 }

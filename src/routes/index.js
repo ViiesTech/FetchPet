@@ -12,6 +12,8 @@ import AddPetInfo from '../screens/main/customer/AddPet';
 import PetRescuesStack from './petRescues/PetRescuesStack';
 import TrackDonations from '../screens/main/customer/TrackDonations';
 import TravelExpenses from '../screens/main/customer/TravelExpenses';
+import TrackingOfVolunteerMiles from '../screens/main/driver/TrackingOfVolunteerMiles';
+import DriversTackingSystem from '../screens/main/driver/DriversTackingSystem';
 
 const Stack = createNativeStackNavigator();
 const Routes = () => {
@@ -31,6 +33,8 @@ const Routes = () => {
                     <Stack.Screen name='FavouritesDriver' component={FavouritesDriver} />
                     <Stack.Screen name='TrackDonations' component={TrackDonations} />
                     <Stack.Screen name='TravelExpenses' component={TravelExpenses} />
+                    <Stack.Screen name='TrackingOfVolunteerMiles' component={TrackingOfVolunteerMiles} />
+                    <Stack.Screen name='DriversTackingSystem' component={DriversTackingSystem} />
                 </Stack.Navigator>
             </NavigationContainer>
         </>

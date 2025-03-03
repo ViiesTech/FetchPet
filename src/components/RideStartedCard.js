@@ -30,7 +30,7 @@ const RideStartedCard = ({ style,name,image }) => {
                     <Text style={styles.review}>4.9 Reviews</Text>
                     <Text style={styles.tripText}>(243 trips)</Text>
                 </View>
-                <View style={{ flexDirection: 'row', gap: 10, paddingTop: responsiveHeight(2), marginLeft: responsiveHeight(2.5) }}>
+                <View style={{ flexDirection: 'row', gap: 10, paddingTop: responsiveHeight(2)}}>
                     {rideOptions.map((item) => {
                         return (
                             <TouchableOpacity style={styles.iconView}>
@@ -60,7 +60,7 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         alignSelf: 'center',
         justifyContent: 'space-between',
-        width: responsiveWidth(85),
+        width: responsiveWidth(90),
         borderRadius: 10,
         padding: responsiveHeight(1.5)
     },
@@ -82,7 +82,7 @@ const styles = StyleSheet.create({
     time: {
         color: colors.primary,
         fontWeight: 'bold',
-        fontSize: responsiveFontSize(2.4)
+        fontSize: responsiveFontSize(1.5)
     },
     iconView: {
         backgroundColor: colors.primary,

@@ -101,16 +101,19 @@ const IncomingRidesCard = ({ onAction, onStartRyde, age,weight,time,date, btnSty
             <View style={{ flexDirection: 'row', alignItems: 'center', paddingTop: responsiveHeight(2), gap: 10 }}>
                 <Text style={styles.typeText}>Payment type:</Text>
                 <View style={{ flexDirection: 'row', alignItems: 'center' }}>
-                    <SVGIcons image={icons.cash} />
+                    <SVGIcons image={icons.cash}  />
                     <Text style={styles.cashText}>Cash</Text>
                 </View>
             </View>
             {accepted &&
-                <CustomButton onPress={onStartRyde} btnText={'Start Ryde'} style={[styles.buttonStyle, { width: responsiveHeight(40) }]} />
+            <>
+                <CustomButton onPress={onStartRyde} btnText={'START RIDE'} textStyle={{fontWeight: 'bold'}} style={[styles.buttonStyle, { width: responsiveHeight(40) }]} />
+                <CustomButton onPress={onStartRyde} btnText={'SHARE RIDE'} textStyle={{fontWeight: 'bold'}} style={[styles.buttonStyle, { width: responsiveHeight(40) }]} />
+            </>
             }
             <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
-                <CustomButton onPress={onAcceptPress} btnText={accepted ? 'Call' : 'Accept'} style={[styles.buttonStyle, btnStyle]} />
-                <CustomButton onPress={onAction} btnText={accepted ? 'Chat' : 'Decline'} style={[styles.buttonStyle, !accepted && { backgroundColor: colors.red }, btnStyle]} />
+                <CustomButton textStyle={{fontWeight: 'bold'}}  onPress={onAcceptPress} btnText={accepted ? 'CALL' : 'Accept'} style={[styles.buttonStyle, btnStyle]} />
+                <CustomButton textStyle={{fontWeight: 'bold'}}  onPress={onAction} btnText={accepted ? 'CHAT' : 'Decline'} style={[styles.buttonStyle, !accepted && { backgroundColor: colors.red }, btnStyle]} />
             </View>
         </TouchableOpacity>
     )
@@ -121,12 +124,12 @@ export default IncomingRidesCard
 const styles = StyleSheet.create({
     cardStyle: {
         borderWidth: 0.3,
-        marginBottom: responsiveHeight(2.5),
+        marginBottom: responsiveHeight(4.5),
         borderRadius: 10,
         padding: responsiveHeight(1.5),
         width: responsiveWidth(89),
         borderColor: colors.black,
-        backgroundColor: colors.secondary
+        backgroundColor: colors.secondary,
     },
     imageStyle: {
         height: responsiveHeight(6),

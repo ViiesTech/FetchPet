@@ -264,6 +264,7 @@ export const incomingRides = [
         weight: 'Medium 31 - 60 lbs',
         date: '12/11/2024',
         time: '11:00 Am',
+        review: '4.9',
         age: 'Puppy 0 - 1 years',
         distance: '6 mins away (900m)',
     },
@@ -274,6 +275,7 @@ export const incomingRides = [
         weight: 'Medium 20 - 40 lbs',
         date: '10/11/2024',
         time: '7:00 Am',
+        review: '4.9',
         age: 'Puppy 2 - 4 years',
         distance: '5 mins away (650m)',
     },
@@ -284,6 +286,7 @@ export const incomingRides = [
         weight: 'Medium 15 - 35 lbs',
         date: '7/11/2024',
         time: '9:00 Am',
+        review: '4.9',
         age: 'Puppy 4 - 7 years',
         distance: '3 mins away (300m)',
     }
@@ -305,11 +308,15 @@ export const locations = [
 export const rideOptions = [
     {
         id: 1,
-        icon: icons.message
+        icon: icons.voice
     },
     {
         id: 2,
-        icon: icons.call
+        icon: icons.message
+    },
+    {
+        id: 3,
+        icon: icons.video
     }
 ]
 
@@ -442,6 +449,75 @@ export const profileSettings = [
         navTo: 'AuthStack',
     }
 ]
+
+export const driverProfileSettings = [
+    {
+        id: 1,
+        icon: icons.fech,
+        text: 'About Fech',
+        navTo: 'About'
+    },
+    {
+        id: 2,
+        icon: icons.favourite,
+        text: 'Your Favourites',
+        navTo: 'FavouritesDriver',
+    },
+    {
+        id: 3,
+        icon: icons.carRide,
+        text: 'Upcomming booked rides',
+        navTo: 'TravelExpenses',
+    },
+    {
+        id: 4,
+        icon: icons.dollar,
+        text: 'Payments',
+        navTo: '',
+    },
+    {
+        id: 5,
+        icon: icons.tracking,
+        text: 'Tracking of volunteer miles',
+        navTo: 'TrackingOfVolunteerMiles',
+    },
+    {
+        id: 6,
+        icon: icons.tracking,
+        text: 'Drivers tracking system',
+        navTo: 'DriversTackingSystem',
+    },
+    {
+        id: 7,
+        icon: icons.file,
+        text: 'Contractors agreement',
+        navTo: '',
+    },
+    {
+        id: 8,
+        icon: icons.questionMark,
+        text: 'Help Fech',
+        navTo: '',
+    },
+    {
+        id: 9,
+        icon: icons.settings,
+        text: 'Settings',
+        navTo: '',
+    },
+    {
+        id: 10,
+        icon: icons.logout,
+        text: 'Log out',
+        navTo: 'AuthStack',
+    }
+]
+
+export const setting = {
+    Driver: driverProfileSettings,
+    Customer: profileSettings,
+    Rescue: profileSettings,
+}
 
 export const petExp = [
     {
