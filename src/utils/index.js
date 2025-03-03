@@ -391,13 +391,13 @@ export const profileSettings = [
         id: 3,
         icon: icons.two_hands,
         text: 'Track Donations Made',
-        navTo: '',
+        navTo: 'TrackDonations',
     },
     {
         id: 4,
         icon: icons.carRide,
         text: 'Tracking of travel expenses',
-        navTo: '',
+        navTo: 'TravelExpenses',
     },
     {
         id: 5,
