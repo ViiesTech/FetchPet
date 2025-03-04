@@ -1,8 +1,8 @@
-import { Image, StyleSheet, TouchableOpacity, View } from 'react-native'
+import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import React from 'react'
 import Container from '../../components/Container'
 import Header from '../../components/Header'
-import { petExp, prices, responsiveHeight, responsiveWidth } from '../../utils'
+import { petExp, prices, responsiveFontSize, responsiveHeight, responsiveWidth } from '../../utils'
 import images from '../../assets/images'
 import SVGIcons from '../../components/SVGIcons'
 import icons from '../../assets/icons'
@@ -158,6 +158,11 @@ const DriverDetails = () => {
                                             textStyle={{color: colors.primary, fontWeight: 'bold'}}
                         placeholder={'2.5 Years of experience'}
                     />
+                      <Picker
+                        items={petExp}
+                        placeholder={'Lorem Ipsum'}
+                        heading={'Fech means of communication methods'}
+                    />
                     <CustomInput
                         heading={'Rate per minute for drive'}
                         inputContainer={{ marginBottom: responsiveHeight(2.5), width: responsiveWidth(92) }}
@@ -170,12 +175,71 @@ const DriverDetails = () => {
                                             textStyle={{color: colors.primary, fontWeight: 'bold'}}
                         placeholder={'2.5 Years of experience with animals'}
                     />
-                    <Picker
+                      <Picker
                         items={petExp}
-                        placeholder={'Lorem Ipsum'}
-                        heading={'Fech means of communication methods'}
+                        placeholder={'English'}
+                        heading={'Add Languages Spoken'}
                     />
-                    <Picker
+                       <Picker
+                        items={petExp}
+                        placeholder={'Yes'}
+                        heading={'Pet CPR certified'}
+                    />
+                       <Picker
+                        items={petExp}
+                        placeholder={'Dog'}
+                        heading={'Select animals they are willing to transport'}
+                    />
+                       <Picker
+                        items={petExp}
+                        placeholder={'Medium 21 - 50 lbs'}
+                        heading={'Select size of animal they are willing to transport'}
+                    />
+                       <Picker
+                        items={petExp}
+                        placeholder={'Yes'}
+                        heading={'Select yes or no if they agree to transport sick animals'}
+                    />
+
+                    <View style={{marginBottom: responsiveHeight(2.5)}}>
+                        <Text style={{
+                                marginBottom: responsiveHeight(1),
+                                fontSize: responsiveFontSize(2),
+                                color: colors.primary,
+                                fontWeight: '500'
+                            }}>Download proof of car registration</Text>
+                    <CustomButton style={{width: '100%'}} btnText={'Download'} onPress={() => {}} />
+                    </View>
+
+                    <View style={{marginBottom: responsiveHeight(2.5)}}>
+                        <Text style={{
+                                marginBottom: responsiveHeight(1),
+                                fontSize: responsiveFontSize(2),
+                                color: colors.primary,
+                                fontWeight: '500'
+                            }}>Vehicle Interior & exterior Images</Text>
+                    <CustomButton style={{width: '100%'}} btnText={'Download'} onPress={() => {}} />
+                    </View>
+
+                    <CustomInput
+                        heading={'what type of restraint will be provided for the transportation.'}
+                        inputContainer={{ marginBottom: responsiveHeight(2.5), borderColor: colors.gray2, paddingLeft: 10, height: responsiveHeight(20), borderRadius: 10, width: responsiveWidth(92) }}
+                                            textStyle={{color: colors.primary, fontWeight: 'bold'}}
+                        placeholder={'Write here...'}
+                        multiline={true}
+                        alignVertical={'top'}
+                    />
+
+                    <CustomInput
+                        heading={'My Story'}
+                        inputContainer={{ marginBottom: responsiveHeight(2.5), borderColor: colors.gray2, height: responsiveHeight(20), borderRadius: 10, width: responsiveWidth(92) }}
+                                            textStyle={{color: colors.primary, fontWeight: 'bold'}}
+                        placeholder={'Write Some Your About'}
+                        multiline={true}
+                        alignVertical={'top'}
+                    />
+                   
+                    {/* <Picker
                         items={petExp}
                         placeholder={'1-2 years'}
                         heading={'Pet Experience'}
@@ -192,8 +256,10 @@ const DriverDetails = () => {
                         placeholder={'Los Angeles...'}
                         icon={true}
                         textStyle={{color: colors.primary, fontWeight: 'bold'}}
-                    />
-                    <CustomButton btnText={'Submit'} onPress={() => navigation.navigate('DriverStack')} />
+                    /> */}
+                    <View>
+                    <CustomButton style={{width: '100%'}} btnText={'Submit'} onPress={() => navigation.navigate('DriverStack')} />
+                    </View>
                 </View>
             </View>
         </Container>

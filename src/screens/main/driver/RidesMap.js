@@ -39,8 +39,8 @@ const RidesMap = ({ route }) => {
       setIsAccepted(false)
     }
     return (
-      <View style={[styles.cardView, { top: isAccepted ? responsiveHeight(45) : responsiveHeight(46) }]}>
-        <IncomingRidesCard onAction={() => onButtonPress()} date={data.date} time={data.time} weight={data.weight} age={data.age} onStartRyde={() => onStartRide()} accepted={isAccepted} onAcceptPress={() => onAcceptRide()} incoming={true} distance={data.distance} image={data.image} name={data.name} style={{ borderWidth: 0, }} />
+      <View style={[styles.cardView, { top: isAccepted ? responsiveHeight(45) : responsiveHeight(20) }]}>
+        <IncomingRidesCard onAction={() => onButtonPress()} date={data.date} time={data.time} music={data.music} oneWay={data.oneWay} weight={data.weight} age={data.age} onStartRyde={() => onStartRide()} accepted={isAccepted} onAcceptPress={() => onAcceptRide()} incoming={true} distance={data.distance} image={data.image} name={data.name} style={{ borderWidth: 0, }} />
       </View>
     )
   }

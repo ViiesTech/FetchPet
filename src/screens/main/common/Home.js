@@ -133,7 +133,7 @@ const Home = () => {
           )}
           renderItem={({ item }) => {
             return (
-              <IncomingRidesCard weight={item.weight} onAcceptPress={() => navigation.navigate('RidesMap', { detail: item, accepted: true })} btnStyle={{ paddingVertical: responsiveHeight(1.5), borderRadius: 5 }} onPress={() => navigation.navigate('RidesMap', { detail: item })} name={item.name} image={item.image} distance={item.distance} />
+              <IncomingRidesCard weight={item.weight} music={item.music} oneWay={item.oneWay} onAcceptPress={() => navigation.navigate('RidesMap', { detail: item, accepted: true })} btnStyle={{ paddingVertical: responsiveHeight(1.5), borderRadius: 5 }} onPress={() => navigation.navigate('RidesMap', { detail: item })} name={item.name} image={item.image} distance={item.distance} />
             )
           }}
         />

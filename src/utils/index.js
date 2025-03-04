@@ -267,6 +267,8 @@ export const incomingRides = [
         review: '4.9',
         age: 'Puppy 0 - 1 years',
         distance: '6 mins away (900m)',
+        music: 'Music Type',
+        oneWay: 'One Way',
     },
     {
         id: 2,
@@ -278,6 +280,8 @@ export const incomingRides = [
         review: '4.9',
         age: 'Puppy 2 - 4 years',
         distance: '5 mins away (650m)',
+        music: 'Music Type',
+        oneWay: 'One Way',
     },
     {
         id: 3,
@@ -289,6 +293,8 @@ export const incomingRides = [
         review: '4.9',
         age: 'Puppy 4 - 7 years',
         distance: '3 mins away (300m)',
+        music: 'Music Type',
+        oneWay: 'One Way',
     }
 ]
 
